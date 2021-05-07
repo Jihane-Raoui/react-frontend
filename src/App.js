@@ -21,7 +21,7 @@ function App() {
              <Route path='/' exact component={LoginComponent}></Route>
                <Route path='/login' exact component={LoginComponent}></Route>
                
-               <Route path='/dashboard' exact component={Dashboard}></Route>
+               <AuthenticatedRoute path='/dashboard'  component={Dashboard}/>
                <AuthenticatedRoute path='/users' component={ListUserComponent}/>
                
                <AuthenticatedRoute path='/add-user/:id' component={AddUserComponent}/>
